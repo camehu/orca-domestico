@@ -1,18 +1,19 @@
 {
   "name": "orca-domestico",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "registrar valores de orçamentos e pagamentos",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon src/index.js",
-    "start":"src/index.js",
+    "dev": "nodemon src/index.js",
+    "start": "src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2"
   },
   "engines": {

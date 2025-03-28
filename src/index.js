@@ -1,17 +1,18 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import routes from '../src/routes/index.js'
+import AppController from './controller/App.js';
 
 const app = express();
 app.use(cors()); // Permite todas as origens
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
+app.use(routes);
+app.use(AppController.notFound);
+app.use(AppController.handleError);
 
-
-app.get('/',(req,res)=>{
-    res.json("Olá Mundo");
-})
 
 app.use((req,res,next)=>{
     res.header('Acces-Control-Allow-Origin','*');
