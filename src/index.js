@@ -5,6 +5,7 @@ import routes from '../src/routes/index.js'
 import AppController from './controller/App.js';
 
 const app = express();
+
 app.use(cors()); // Permite todas as origens
 app.use(bodyParser.json());
 app.use(express.json());
@@ -12,7 +13,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(routes);
 app.use(AppController.notFound);
 app.use(AppController.handleError);
-
 
 app.use((req,res,next)=>{
     res.header('Acces-Control-Allow-Origin','*');
@@ -39,8 +39,8 @@ app.use((eer, req, res, next)=>{
     }
 });
 
-app.listen(3000)
-
+// app.listen(3000)
 
 export default app
+
 
