@@ -1,5 +1,5 @@
 {
     "mongo": {
-        "uri":""
+        "uri":"mongodb+srv://camehudev:FugdvaVvXzz8LDa5@clusterapi.hwcbbpr.mongodb.net/?retryWrites=true&w=majority&appName=ClusterApi"
     }
 }
